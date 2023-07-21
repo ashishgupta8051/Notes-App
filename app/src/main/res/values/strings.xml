@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Notes App</string>
+    <string name="name">name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="click_to_login">Already have an account? \nclick here to login</string>
+    <string name="click_to_register">Don\'t have an account? \nclick here to register</string>
+    <string name="notes">Notes</string>
+    <string name="logout">Logout</string>
+    <string name="create_note">Create Notes</string>
+    <string name="done">Done</string>
+    <string name="title">Title</string>
+    <string name="addNotes">Add Note</string>
+</resources>

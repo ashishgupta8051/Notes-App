@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="16dp"
+    android:gravity="center"
+    tools:context=".ui.activity.LoginRegisterActivity">
+
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/firebase"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/edit_text_bg"
+        android:hint="@string/name"
+        android:gravity="center|start"
+        android:paddingStart="8dp"
+        android:textSize="14sp"
+        android:visibility="gone"
+        android:inputType="textPersonName"
+        android:textColor="@color/black"
+        android:textColorHint="@color/grey"
+        tools:ignore="RtlSymmetry" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/edit_text_bg"
+        android:hint="@string/email"
+        android:gravity="center|start"
+        android:paddingStart="8dp"
+        android:layout_marginTop="12dp"
+        android:textSize="14sp"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/black"
+        android:textColorHint="@color/grey"
+        tools:ignore="RtlSymmetry" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/edit_text_bg"
+        android:hint="@string/password"
+        android:gravity="center|start"
+        android:layout_marginTop="12dp"
+        android:inputType="textPassword"
+        android:paddingStart="8dp"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/grey"
+        tools:ignore="RtlSymmetry" />
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/btnLogin"
+        android:layout_width="200dp"
+        android:layout_marginTop="16dp"
+        android:layout_height="44dp"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="6dp"
+        app:strokeColor="@color/black"
+        app:cardBackgroundColor="@color/black"
+        >
+
+        <ProgressBar
+            android:id="@+id/progress_loading"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/white"
+            android:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/loginButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            android:textSize="14sp"
+            android:layout_gravity="center"
+            android:textColor="@color/white" />
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLoginPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="6dp"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:text="@string/click_to_register"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

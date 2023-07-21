@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="note"
+            type="com.example.notesapp.model.Note" />
+
+        <variable
+            name="date"
+            type="String" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/item_layout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="6dp"
+        app:strokeColor="@color/black"
+        android:layout_marginHorizontal="16dp"
+        android:layout_height="wrap_content">
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="16dp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNoteTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginEnd="6dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="8dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:text="@{note.title}"
+                />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNotesDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginEnd="6dp"
+                android:textColor="@color/grey"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:text="@{note.description}"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="end"
+                android:layout_marginEnd="6dp"
+                android:textColor="@color/grey"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:text="@{date}"
+                />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>
