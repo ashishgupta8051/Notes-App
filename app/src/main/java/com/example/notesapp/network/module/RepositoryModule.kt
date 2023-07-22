@@ -7,6 +7,7 @@ import com.example.notesapp.network.repository.AuthRepositoryImp
 import com.example.notesapp.network.repository.NoteRepository
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.storage.StorageReference
 import com.google.gson.Gson
 import dagger.Module
 import dagger.Provides
@@ -34,8 +35,9 @@ object RepositoryModule {
     @Singleton
     fun provideNoteRepository(
         database: FirebaseFirestore,
+        storageRef:StorageReference
     ): NoteRepository {
-        return NoteRepositoryImp(database)
+        return NoteRepositoryImp(database, storageRef)
     }
 
 }

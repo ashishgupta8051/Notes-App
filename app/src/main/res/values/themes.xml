@@ -14,4 +14,17 @@
         <item name="boxStrokeWidth">1dp</item>
         <item name="hintTextColor">@color/black</item>
     </style>
+
+
+    <style name="ShapeAppearanceOverlay.App.CornerSize8Percent" parent="">
+        <item name="cornerSize">8%</item>
+    </style>
+
+    <style name="CustomBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
 </resources>

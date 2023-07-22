@@ -8,9 +8,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.notesapp.R
 import com.example.notesapp.databinding.NoteLayoutBinding
 import com.example.notesapp.model.Note
+import com.example.notesapp.util.NotesClickListener
 import java.text.SimpleDateFormat
 
-class NotesAdapter(private val list: List<Note>) : RecyclerView.Adapter<NotesAdapter.UsersViewHolder>() {
+class NotesAdapter(private val list: List<Note>, private val notesClickListener: NotesClickListener) : RecyclerView.Adapter<NotesAdapter.UsersViewHolder>() {
 
     inner class UsersViewHolder(binding: NoteLayoutBinding) : RecyclerView.ViewHolder(binding.root) {
         private val binding: NoteLayoutBinding? = DataBindingUtil.bind(itemView)
@@ -21,7 +22,13 @@ class NotesAdapter(private val list: List<Note>) : RecyclerView.Adapter<NotesAda
             binding!!.note = notes
             binding.date = sdf.format(notes.date).toString()
             binding.executePendingBindings()
+
+            binding.root.setOnClickListener {
+                notesClickListener.onClickListener(note = notes)
+            }
         }
+
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UsersViewHolder {
